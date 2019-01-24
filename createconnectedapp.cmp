@@ -1,6 +1,8 @@
 <aura:component controller="ApplicationHelper" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
     <aura:attribute name="showScreen" type="String" default="1" />
     <aura:attribute name="captureDetail" type="String" />
+    <aura:attribute name="input1" type="string" />
+    <aura:attribute name="input2" type="string" />
      <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <div class="demo-only" style="height: 640px;">
         <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large" aura:id="modalbox">
@@ -12,9 +14,9 @@
                 <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
                     <aura:if isTrue="{!v.showScreen == '1'}">
                         <div class="row">
-                            <lightning:input aura:id="input1" name="input1" label="Display Name" />
+                            <lightning:input aura:id="input1" name="input1" label="Display Name" value="{!v.input1}"/>
                             
-                            <lightning:input aura:id="input2" name="input2" label="Contact Email" />
+                            <lightning:input aura:id="input2" name="input2" label="Contact Email" value="{!v.input2}"/>
                         </div>
                     </aura:if>
                     
