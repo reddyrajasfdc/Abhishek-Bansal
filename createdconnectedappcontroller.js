@@ -7,7 +7,7 @@
             component.find("AppID").set("v.disabled",true);
         }
         
-        if(component.find("AppID").get("v.label") == 'Submit'){
+        if(component.find("AppID").get("v.label") == 'Submit' && component.get("v.captureDetail") == 'Unlock'){
            
             var action = component.get("c.createApp");
               action.setParams({ 
